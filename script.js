@@ -1,20 +1,6 @@
 // 변수 생성
 let userMessages = [];
 let assistantMessages = [];
-let myDateTime = ""; // date + hour
-function start() {
-  const date = document.querySelector("#date").value;
-  const hour = document.querySelector("#hour").value;
-  if (date == "") {
-    alert("Please select a birth date");
-    return;
-  }
-
-  myDateTime = date + hour;
-  document.querySelector("#intro").style.display = "none";
-  document.querySelector("#chat").style.display = "block";
-  console.log(myDateTime);
-}
 
 async function sendMessage() {
   // display the loading icon
@@ -46,7 +32,6 @@ async function sendMessage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          myDateTime: myDateTime,
           userMessages: userMessages,
           assistantMessages: assistantMessages,
         }),
