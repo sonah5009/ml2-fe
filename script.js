@@ -25,7 +25,9 @@ async function sendMessage() {
   try {
     const response = await fetch(
       // backend server
-      "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws",
+      // "http://localhost:3000",
+      "https://dzzm4nf4tu5tmy7bg645yuy7bm0ahplx.lambda-url.eu-west-3.on.aws/",
+      // "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws",
       {
         method: "POST",
         headers: {
