@@ -24,7 +24,7 @@ async function sendMessage() {
   // send the messages to backend server and then print response
   try {
     const response = await fetch(
-      "https://dzzm4nf4tu5tmy7bg645yuy7bm0ahplx.lambda-url.eu-west-3.on.aws/",
+      "https://dzzm4nf4tu5tmy7bg645yuy7bm0ahplx.lambda-url.eu-west-3.on.aws",
       {
         method: "POST",
         headers: {
