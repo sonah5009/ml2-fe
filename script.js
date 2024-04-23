@@ -24,10 +24,7 @@ async function sendMessage() {
   // send the messages to backend server and then print response
   try {
     const response = await fetch(
-      // backend server
-      // "http://localhost:3000",
       "https://dzzm4nf4tu5tmy7bg645yuy7bm0ahplx.lambda-url.eu-west-3.on.aws/",
-      // "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws",
       {
         method: "POST",
         headers: {
@@ -37,7 +34,6 @@ async function sendMessage() {
           userMessages: userMessages,
           assistantMessages: assistantMessages,
         }),
-        // CORS issue
         mode: "no-cors",
       }
     );
