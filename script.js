@@ -37,17 +37,21 @@ async function sendMessage() {
 
   // send the messages to backend server and then print response
   try {
-    const response = await fetch("http://localhost:3000/fortuneTell", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        myDateTime: myDateTime,
-        userMessages: userMessages,
-        assistantMessages: assistantMessages,
-      }),
-    });
+    const response = await fetch(
+      // backend server
+      "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws/fortuneTell",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          myDateTime: myDateTime,
+          userMessages: userMessages,
+          assistantMessages: assistantMessages,
+        }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Request failed with status " + response.status);
