@@ -50,6 +50,8 @@ async function sendMessage() {
           userMessages: userMessages,
           assistantMessages: assistantMessages,
         }),
+        // CORS issue
+        mode: "no-cors",
       }
     );
 
