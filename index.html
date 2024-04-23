@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fortune ChatDodge</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="intro" class="intro-container">
+      <h1>Fortune Teller</h1>
+      <img src="./doge.png" alt="chatdoge" />
+      <label for="date">BIRTH</label>
+      <input id="date" type="date" />
+      <label for="hour">BIRTH TIME</label>
+      <select id="hour">
+        <option value="">N/A</option>
+        <option value="00">00</option>
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="05">05</option>
+        <option value="06">06</option>
+        <option value="07">07</option>
+        <option value="08">08</option>
+        <option value="09">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+      </select>
+      <button onclick="start()">See Today's Fortune</button>
+    </div>
+    <div id="chat" class="chat-container" style="display: none">
+      <div class="chat-bubble bot-bubble" id="fortuneResponse">
+        Feel free to ask anything about horoscopes.
+      </div>
+      <div id="loader" class="loader" style="display: none">
+        <i class="loading-icon fas fa-spinner fa-spin"></i>
+      </div>
+      <input
+        type="text"
+        class="chat-input"
+        id="messageInput"
+        placeholder="Input messages..." />
+      <button class="send-button" onclick="sendMessage()">Send</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
