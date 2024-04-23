@@ -25,7 +25,7 @@ async function sendMessage() {
   try {
     const response = await fetch(
       // backend server
-      "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws/fortuneTell",
+      "https://wx7axd3xjgffw3qmfj3asloyhi0cvxka.lambda-url.us-east-2.on.aws",
       {
         method: "POST",
         headers: {
